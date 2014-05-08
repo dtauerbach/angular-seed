@@ -2,7 +2,7 @@
 
 /* Filters */
 
-angular.module('myApp.filters', []).
+angular.module('fairPayApp.filters', []).
   filter('interpolate', ['version', function(version) {
     return function(text) {
       return String(text).replace(/\%VERSION\%/mg, version);
