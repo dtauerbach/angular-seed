@@ -4,6 +4,7 @@
 
 angular.module('fairPayApp.controllers', [])
   .controller('MyCtrl1', ['$scope', '$location', 'myService', function($scope, $location, myService) {
+    // NOTE: this is janky. We need to include 'where' here and make this more robust
     $scope.flow = ["/", "/job", "/salary", "/data"];
 
     $scope.nextPage = function() {
