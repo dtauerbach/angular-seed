@@ -3,7 +3,15 @@
 /* Controllers */
 
 angular.module('fairPayApp.controllers', [])
-  .controller('MyCtrl1', ['$scope', function($scope) {
+  .controller('MyCtrl1', ['$scope', '$location', function($scope, $location) {
+    $scope.nextPage = function() {
+      $location.path( "/view2" );
+    };
+
+    $scope.prevPage = function() {
+      $location.path ("/");
+    };
+
     $scope.master = {};
 
     $scope.update = function(user) {

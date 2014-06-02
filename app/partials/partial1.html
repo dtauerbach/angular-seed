@@ -1,7 +1,8 @@
 <div> Where do you work? </div>
 <form name="myForm" ng-controller="MyCtrl1">
-  <input type="radio" ng-model="user.workplace" value="google">  Google <br/>
-  <input type="radio" ng-model="user.workplace" value="facebook"> Facebook <br/>
-  <input type="radio" ng-model="user.workplace" value="amazon"> Amazon <br/>
+  <input type="radio" ng-model="user.workplace" value="google" ng-click="nextPage()">  Google <br/>
+  <input type="radio" ng-model="user.workplace" value="facebook" ng-click="nextPage()"> Facebook <br/>
+  <input type="radio" ng-model="user.workplace" value="amazon" ng-click="nextPage()"> Amazon <br/>
   <tt>user = {{user | json}}</tt><br/>
 </form>
+
