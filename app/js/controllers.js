@@ -15,6 +15,11 @@ angular.module('fairPayApp.controllers', [])
       $location.path ("/");
     };
 
+    $scope.sorryPage = function() {
+      $scope.update();
+      $location.path( "/sorry" );
+    }
+
     $scope.user = myService.getData();
 
     $scope.update = function() {
@@ -28,5 +33,6 @@ angular.module('fairPayApp.controllers', [])
   }])
   .controller('mainController', ['$scope', function($scope) {
     $scope.message = "blah blah";
-
+  }])
+  .controller('fp-sorry', ['$scope', function($scope) {
   }]);
