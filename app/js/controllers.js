@@ -6,7 +6,8 @@ angular.module('fairPayApp.controllers', [])
   .controller('MyCtrl1', ['$scope', '$location', 'myService', function($scope, $location, myService) {
     $scope.nextPage = function() {
       $scope.update();
-      $location.path( "/view2" );
+      // todo: keep track of where the user is and go forward and backwards intelligently
+      $location.path( "/salary" );
     };
 
     $scope.prevPage = function() {

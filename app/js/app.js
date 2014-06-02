@@ -9,8 +9,8 @@ angular.module('fairPayApp', [
   'fairPayApp.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/', {templateUrl: 'partials/partial1.html', controller: 'MyCtrl1'});
-  $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl1'});
+  $routeProvider.when('/', {templateUrl: 'partials/where.html', controller: 'MyCtrl1'});
+  $routeProvider.when('/salary', {templateUrl: 'partials/salary.html', controller: 'MyCtrl1'});
   $routeProvider.otherwise({redirectTo: '/'});
 }]);
 
