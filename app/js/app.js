@@ -13,6 +13,7 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/where', {templateUrl: 'partials/where.html', controller: 'MyCtrl1'});
   $routeProvider.when('/salary', {templateUrl: 'partials/salary.html', controller: 'MyCtrl1'});
   $routeProvider.when('/job', {templateUrl: 'partials/job.html', controller: 'MyCtrl1'});
+  $routeProvider.when('/data', {templateUrl: 'partials/data.html', controller: 'MyCtrl1'});
   $routeProvider.when('/sorry', {templateUrl: 'partials/sorry.html', controller: 'fp-sorry'});
   $routeProvider.otherwise({redirectTo: '/'});
 }]);
