@@ -3,25 +3,27 @@
 /* Controllers */
 
 angular.module('fairPayApp.controllers', [])
-  .controller('MyCtrl1', ['$scope', '$location', function($scope, $location) {
+  .controller('MyCtrl1', ['$scope', '$location', 'myService', function($scope, $location, myService) {
     $scope.nextPage = function() {
+      $scope.update();
       $location.path( "/view2" );
     };
 
     $scope.prevPage = function() {
+      $scope.update();
       $location.path ("/");
     };
 
-    $scope.master = {};
+    $scope.user = myService.getData();
 
-    $scope.update = function(user) {
-      $scope.master = angular.copy(user);
+    $scope.update = function() {
+      myService.setData($scope.user)
     };
 
     $scope.reset = function() {
-      $scope.user = angular.copy($scope.master);
+      myService.resetData();
     };
-    $scope.reset();
+
   }])
   .controller('mainController', ['$scope', function($scope) {
     $scope.message = "blah blah";
