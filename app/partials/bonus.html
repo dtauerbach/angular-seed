@@ -1,0 +1,7 @@
+<div> What is your annual bonus? </div>
+<form name="myForm" ng-controller="MyCtrl1">
+  <input type="text" ng-model="user.bonus" placeholder="e.g. 10000"><br />
+  <input type="submit" ng-click="nextPage()" value="Next"><br />
+  <tt>user = {{user | json}}</tt><br/>
+</form>
+<button ng-click="prevPage()">Back</button>

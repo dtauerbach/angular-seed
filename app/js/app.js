@@ -15,6 +15,7 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/job', {templateUrl: 'partials/job.html', controller: 'MyCtrl1'});
   $routeProvider.when('/data', {templateUrl: 'partials/data.html', controller: 'MyCtrl1'});
   $routeProvider.when('/sorry', {templateUrl: 'partials/sorry.html', controller: 'fp-sorry'});
+  $routeProvider.when('/bonus', {templateUrl: 'partials/bonus.html', controller: 'MyCtrl1'});
   $routeProvider.otherwise({redirectTo: '/'});
 }]);
 
